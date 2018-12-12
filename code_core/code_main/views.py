@@ -41,11 +41,10 @@ def coder(message: str) -> str:
         coder_list.append(cipher_dict[char])
     return ''.join(coder_list)
 
-print(coder('Tomek Beben'))
 
 def cesar_cipher(request):
     to = ''
-    direction = 'right'
+    direction = ''
     translation = 3
     message = ''
     result = ''
@@ -61,7 +60,7 @@ def cesar_cipher(request):
                     message = request.GET.get('message')
                     result = coder(message)
 
-    obj = Cipher.objects.create(to=to,message=message, direction=direction, translation=translation,
+    obj = Cipher.objects.create(to=to, message=message, direction=direction, translation=translation,
                                 result=result)
     obj.save()
 
