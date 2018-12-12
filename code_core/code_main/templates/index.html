@@ -1,0 +1,27 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fibonacci Results</title>
+</head>
+<body>
+    <section class="fibonacci-ui">
+        <div class="container">
+            <form action="" method="GET">
+                <input type="search" placeholder="To:" name="to">
+                <input type="search" placeholder="Write your message" name="message">
+                <input type="search" placeholder="Choose direction of cipher (right/left)" name="direction">
+                <input type="search" placeholder="Choose range of translaction" name="translaction">
+                <button>Go</button>
+            </form>
+            <div>
+                <p>Your secret message: {{result}}</p>
+                <br/>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
