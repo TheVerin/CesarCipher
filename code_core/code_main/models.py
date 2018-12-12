@@ -5,7 +5,7 @@ class Cipher(models.Model):
     to = models.CharField(max_length=100)
     message = models.TextField()
     direction = models.CharField(max_length=10)
-    translaction = models.IntegerField()
+    displacement = models.IntegerField()
     result = models.TextField()
 
     class Meta:

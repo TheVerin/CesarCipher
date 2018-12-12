@@ -12,7 +12,7 @@ def list_creator() -> list:
         LETTERS.append(j.upper())
 
     nums = []
-    for k in range(0, 10):
+    for k in '0123456789':
         nums.append(k)
 
     signs = []
@@ -22,21 +22,21 @@ def list_creator() -> list:
     return (letters + LETTERS + nums + signs) * 2
 
 
-def dict_creator(direction='right', translation=3) -> dict:
+def dict_creator(direction='right', displacement=3) -> dict:
     cipher_list = list_creator()
     cipher_dict = {}
     if direction == 'right':
-        for o in range(len(cipher_list) - translation):
-            cipher_dict[cipher_list[o]] = cipher_list[o + translation]
+        for o in range(len(cipher_list) - displacement):
+            cipher_dict[cipher_list[o]] = cipher_list[o + displacement]
     else:
-        for o in range(len(cipher_list) + translation):
-            cipher_dict[cipher_list[o]] = cipher_list[o - translation]
+        for o in range(len(cipher_list) + displacement):
+            cipher_dict[cipher_list[o]] = cipher_list[o - displacement]
     return cipher_dict
 
 
 def coder(message: str) -> str:
     coder_list = []
-    cipher_dict = dict_creator(direction='right', translation=3)
+    cipher_dict = dict_creator(direction='right', displacement=3)
     for char in message:
         coder_list.append(cipher_dict[char])
     return ''.join(coder_list)
@@ -45,7 +45,7 @@ def coder(message: str) -> str:
 def cesar_cipher(request):
     to = ''
     direction = ''
-    translation = 3
+    displacement = 3
     message = ''
     result = ''
 
@@ -53,25 +53,25 @@ def cesar_cipher(request):
         to = request.GET.get('to')
         if request.GET.get('direction'):
             direction = request.GET.get('direction')
-            if request.GET.get('translation'):
-                tr = request.GET.get('translation')
-                translation = int(tr)
+            if request.GET.get('displacement'):
+                tr = request.GET.get('displacement')
+                displacement = int(tr)
                 if request.GET.get('message'):
                     message = request.GET.get('message')
                     result = coder(message)
 
-    obj = Cipher.objects.create(to=to, message=message, direction=direction, translation=translation,
+    obj = Cipher.objects.create(to=to, message=message, direction=direction, displacement=displacement,
                                 result=result)
     obj.save()
 
     return render(
-        request,
+        request, 
         'index.html',
         {
             'to': to,
             'message': message,
             'direction': direction,
-            'tramslation': translation,
+            'displacement': displacement,
             'result': result
 
         }

@@ -2,5 +2,5 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    path('', views.coder, name='cesar_cipher'),
+    path('', views.cesar_cipher, name='cesar_cipher'),
 ]
