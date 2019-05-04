@@ -11,15 +11,11 @@ def list_creator() -> list:
     for j in letters:
         LETTERS.append(j.upper())
 
-    nums = []
-    for k in '0123456789':
-        nums.append(k)
+    signs_nums = []
+    for l in ",./;:[]{}-_<>' 0123456789":
+        signs_nums.append(l)
 
-    signs = []
-    for l in ",./;:[]{}-_<>' ":
-        signs.append(l)
-
-    return (letters + LETTERS + nums + signs) * 2
+    return (letters + LETTERS + signs_nums) * 2
 
 
 def dict_creator(direction='right', displacement=3) -> dict:

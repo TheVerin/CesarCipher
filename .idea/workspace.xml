@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="680c173a-7a30-4a8f-9ebe-1d32fac24057" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/CesarCipher.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CesarCipher.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code_core/code_main/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/code_core/code_main/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code_core/code_main/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/code_core/code_main/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code_core/code_main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/code_core/code_main/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code_core/code_main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/code_core/code_main/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/code_core/code_main/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+            <state relative-caret-position="120">
+              <caret line="8" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="8" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -201,8 +196,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/code_core/code_main/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+        <state relative-caret-position="120">
+          <caret line="8" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="8" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
